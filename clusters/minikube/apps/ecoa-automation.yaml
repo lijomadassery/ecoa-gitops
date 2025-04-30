@@ -1,0 +1,24 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: ecoa-update
+  namespace: flux-system
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: ecoa-app
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxbot@users.noreply.github.com
+        name: fluxbot
+      messageTemplate: 'Update image to {{.NewTag}}'
+    push:
+      branch: main
+  update:
+    path: ./kubernetes
+    strategy: Setters
