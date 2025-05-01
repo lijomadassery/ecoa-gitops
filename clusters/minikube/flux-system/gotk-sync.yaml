@@ -12,6 +12,7 @@ spec:
   secretRef:
     name: flux-system-auth
   url: https://github.com/lijomadassery/ecoa-gitops.git
+  insecure: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
