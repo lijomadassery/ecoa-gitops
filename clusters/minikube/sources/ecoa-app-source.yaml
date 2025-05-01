@@ -10,5 +10,3 @@ spec:
   url: https://github.com/lijomadassery/ecoa.git
   ref:
     branch: main
-  secretRef:
-    name: https-credentials
