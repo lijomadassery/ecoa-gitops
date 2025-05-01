@@ -8,3 +8,4 @@ spec:
   url: https://github.com/lijomadassery/ecoa.git
   ref:
     branch: main
+  insecure: true
