@@ -3,10 +3,12 @@ kind: GitRepository
 metadata:
   name: ecoa-app
   namespace: flux-system
+  annotations:
+    source.toolkit.fluxcd.io/sslVerify: "false"
 spec:
   interval: 1m
-  url: ssh://git@github.com/lijomadassery/ecoa.git
+  url: https://github.com/lijomadassery/ecoa.git
   ref:
     branch: main
   secretRef:
-    name: flux-gitops-key
+    name: https-credentials
