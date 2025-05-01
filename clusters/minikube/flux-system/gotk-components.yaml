@@ -4929,6 +4929,8 @@ spec:
           name: data
         - mountPath: /tmp
           name: tmp
+      imagePullSecrets:
+      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -6813,6 +6815,8 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: temp
+      imagePullSecrets:
+      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -10615,6 +10619,8 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: temp
+      imagePullSecrets:
+      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -12573,6 +12579,8 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: temp
+      imagePullSecrets:
+      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       securityContext:
