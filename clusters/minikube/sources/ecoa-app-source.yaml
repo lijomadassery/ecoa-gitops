@@ -5,7 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/lijomadassery/ecoa.git
+  url: ssh://git@github.com/lijomadassery/ecoa.git
   ref:
     branch: main
-  insecure: true
+  secretRef:
+    name: flux-gitops-key
