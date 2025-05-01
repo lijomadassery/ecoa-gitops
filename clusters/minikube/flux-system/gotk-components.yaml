@@ -4888,7 +4888,7 @@ spec:
               containerName: manager
               resource: limits.memory
         image: ghcr.io/fluxcd/source-controller:v1.5.0
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz
@@ -4929,8 +4929,6 @@ spec:
           name: data
         - mountPath: /tmp
           name: tmp
-      imagePullSecrets:
-      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -6779,7 +6777,7 @@ spec:
               containerName: manager
               resource: limits.memory
         image: ghcr.io/fluxcd/kustomize-controller:v1.5.1
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz
@@ -6815,8 +6813,6 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: temp
-      imagePullSecrets:
-      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -10583,7 +10579,7 @@ spec:
               containerName: manager
               resource: limits.memory
         image: ghcr.io/fluxcd/helm-controller:v1.2.0
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz
@@ -10619,8 +10615,6 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: temp
-      imagePullSecrets:
-      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -12537,7 +12531,7 @@ spec:
               containerName: manager
               resource: limits.memory
         image: ghcr.io/fluxcd/notification-controller:v1.5.0
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz
@@ -12579,8 +12573,6 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: temp
-      imagePullSecrets:
-      - name: none
       nodeSelector:
         kubernetes.io/os: linux
       securityContext:
