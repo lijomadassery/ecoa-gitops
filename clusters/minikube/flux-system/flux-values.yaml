@@ -1,0 +1,23 @@
+helmController:
+  image:
+    repository: fluxcd/helm-controller
+    tag: v0.37.0
+  imagePullPolicy: Never
+
+sourceController:
+  image:
+    repository: fluxcd/source-controller
+    tag: v1.5.0
+  imagePullPolicy: Never
+
+kustomizeController:
+  image:
+    repository: fluxcd/kustomize-controller
+    tag: v1.2.0
+  imagePullPolicy: Never
+
+notificationController:
+  image:
+    repository: fluxcd/notification-controller
+    tag: v1.2.0
+  imagePullPolicy: Never 
