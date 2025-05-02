@@ -7,7 +7,7 @@ metadata:
     source.toolkit.fluxcd.io/caFile: "/etc/ssl/certs/custom/ca.crt"
 spec:
   interval: 1m
-  url: https://github.com/lijomadassery/ecoa.git
+  url: https://api.github.com/repos/lijomadassery/ecoa
   ref:
     branch: main
   insecureIgnoreHostKey: true
