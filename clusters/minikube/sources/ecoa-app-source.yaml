@@ -3,11 +3,8 @@ kind: GitRepository
 metadata:
   name: ecoa-app
   namespace: flux-system
-  annotations:
-    source.toolkit.fluxcd.io/caFile: "/etc/ssl/certs/custom/ca.crt"
 spec:
   interval: 1m
-  url: https://api.github.com/repos/lijomadassery/ecoa
+  url: https://github.com/lijomadassery/ecoa.git
   ref:
     branch: main
-  insecureIgnoreHostKey: true
