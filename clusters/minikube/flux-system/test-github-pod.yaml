@@ -9,11 +9,12 @@ spec:
     seccompProfile:
       type: RuntimeDefault
   containers:
-  - name: curl
-    image: curlimages/curl
+  - name: alpine
+    image: alpine:3.18
     command: ["sleep", "3600"]
     securityContext:
       allowPrivilegeEscalation: false
       capabilities:
         drop: ["ALL"]
+      runAsUser: 1000
       runAsNonRoot: true 
