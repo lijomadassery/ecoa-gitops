@@ -4871,7 +4871,7 @@ spec:
         - --storage-path=/data
         - --storage-adv-addr=source-controller.$(RUNTIME_NAMESPACE).svc.cluster.local.
         env:
-         - name: GIT_SSL_NO_VERIFY
+        - name: GIT_SSL_NO_VERIFY
           value: "true"
         - name: RUNTIME_NAMESPACE
           valueFrom:
